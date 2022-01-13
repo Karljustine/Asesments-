@@ -72,10 +72,13 @@ int main()
 			cout << quantity << "" << Coffee1;
 			cout << " You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash ";  
 			cin >> money; 
-		
-		
-			
-			cout << " Your change is " << money - choice << endl;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(1000, '\n');
+				cout << " \nInvalid input, enter a valid option :";
+				cin >> money;
+			}
+		    cout << " Your change is " << money - choice << endl;
 			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
 			break;
 
@@ -83,21 +86,27 @@ int main()
 			cout << quantity << "" << Coffee2;
 			cout << " You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash ";  
 			cin >> money;
-		
-		
-			cout << " Your change is " << money - choice << endl;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(1000, '\n');
+				cout << " \nInvalid input, enter a valid option :";
+				cin >> money;
+			}
+	        cout << " Your change is " << money - choice << endl;
 			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
 			break;
 
 		case 3: cout << " ---Receipt---\n ";
 			cout << quantity << "" << Coffee3;
 			cout << " You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; 
-			cin >> money;
-
-			
-				cout << " Your change is " << money - choice << endl;
-			
-			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			cin >> money; while (cin.fail()) {
+				cin.clear();
+				cin.ignore(1000, '\n');
+				cout << " \nInvalid input, enter a valid option :";
+				cin >> money;
+			}
+            cout << " Your change is " << money - choice << endl;
+		    cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
 			break;
 		}
 	}
@@ -144,6 +153,12 @@ if (schoice1 >= 1 && schoice1 <= 3)
 			cout << quantity << "" << Tea1;
 			cout << "\n You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; // simple calculator
 			cin >> money;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(1000, '\n');
+				cout << " \nInvalid input, enter a valid option :";
+				cin >> money;
+			}
 			cout << " Your change is " << money - choice << endl;
 			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
 			break;
@@ -152,6 +167,12 @@ if (schoice1 >= 1 && schoice1 <= 3)
 			cout << quantity << "" << Tea2;
 			cout << "\n You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; // simple calculator
 			cin >> money;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(1000, '\n');
+				cout << " \nInvalid input, enter a valid option :";
+				cin >> money;
+			}
 			cout << " Your change is " << money - choice << endl;
 			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
 			break;
@@ -160,6 +181,12 @@ if (schoice1 >= 1 && schoice1 <= 3)
 			cout << quantity << "" << Tea3;
 			cout << "\n You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; // simple calculator 
 			cin >> money;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(1000, '\n');
+				cout << " \nInvalid input, enter a valid option :";
+				cin >> money;
+			}
 			cout << " Your change is " << money - choice << endl;
 			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
 			break;
