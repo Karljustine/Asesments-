@@ -1,0 +1,169 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+int main()
+{
+	// 3 data types with Array
+	char name[30], Coffee1[] = "Ice Coffee", Coffee2[] = "Milk Coffee", Coffee3[] = "Black Coffee";
+	char Tea1[] = "IceTea", Tea2[] = "MilkTea", Tea3[] = "BlackTea", sugar, honey;
+	int choice, schoice1, quantity, money{};
+	bool schoice;
+	
+	
+	system("CLS");
+	cout << " ------- Welcome to Shaii's Hot & Cold Beverage stall -------" << endl;
+	cout << " Please Enter Your Name: ";
+	cin.getline(name, 20);
+	cout << "Hi!" << name << "\n Please select your type of drink:\n";
+
+	// choosing beverage 
+	cout << "1) Coffee's\n";
+	cout << "2) Tea's\n ";
+	std::cin >> choice;
+	while (cin.fail()) { 
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << " \nInvalid input, enter a valid option :";
+		cin >> choice;
+	}
+
+
+	if (choice == 1) {
+		cout << "1." << Coffee1 << " 3dhs " << endl;
+		cout << "2." << Coffee2 << " 2dhs " << endl;
+		cout << "3." << Coffee3 << " 1dhs " << endl;
+		cout << "\n Please Select your Coffee : ";
+		cin >> schoice1;
+		while (cin.fail()) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << " \nInvalid input, enter a valid option :";
+			cin >> schoice1;
+		}
+		cout << " \n Would you like a sachet of sugar Y / N ?";
+			cin >> sugar; 
+		
+		
+			
+        cout << "\n Please enter desired Quantity:";
+		cin >> quantity;
+		while (cin.fail()) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << " \nInvalid input, enter a valid option :";
+			cin >> quantity;
+		}
+		switch (schoice1)
+		{
+		case 1: choice = 3 * quantity;
+			break;
+
+		case 2: choice = 2 * quantity;
+			break;
+
+		case 3: choice = 1 * quantity;
+			break;
+		}
+		system("CLS");
+		switch (schoice1)
+		{
+		 case 1: cout << " ---Receipt---\n ";
+			cout << quantity << "" << Coffee1;
+			cout << " You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash ";  
+			cin >> money; 
+		
+		
+			
+			cout << " Your change is " << money - choice << endl;
+			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			break;
+
+		case 2: cout << " ---Receipt---\n ";
+			cout << quantity << "" << Coffee2;
+			cout << " You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash ";  
+			cin >> money;
+		
+		
+			cout << " Your change is " << money - choice << endl;
+			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			break;
+
+		case 3: cout << " ---Receipt---\n ";
+			cout << quantity << "" << Coffee3;
+			cout << " You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; 
+			cin >> money;
+
+			
+				cout << " Your change is " << money - choice << endl;
+			
+			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			break;
+		}
+	}
+	else if (choice == 2) {
+		cout << "1." << Tea1 << " 3dhs " << endl;
+		cout << "2." << Tea2 << " 2dhs " << endl;
+		cout << "3." << Tea3 << " 1dhs " << endl;
+		cout << "\n Please Select your Tea : ";
+		cin >> schoice1;
+		while (cin.fail()) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << " \nInvalid input, enter a valid option :";
+			cin >> schoice1;
+		}
+		cout << " \n Would you like honey to go with your tea Y / N ?";
+		cin >> honey;
+		
+
+if (schoice1 >= 1 && schoice1 <= 3)
+			cout << "\n Please enter desired Quantity:";
+		cin >> quantity;
+
+		while (cin.fail()) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << " \nInvalid input, enter a valid option :";
+			cin >> quantity;
+		}
+		switch (schoice1)
+		{
+		case 1: choice = 3 * quantity;
+			break;
+
+		case 2: choice = 2 * quantity;
+			break;
+
+		case 3: choice = 1 * quantity;
+			break;
+		}
+		system("CLS");
+		switch (schoice1) {
+		case 1: cout << " ---Receipt---\n ";
+			cout << quantity << "" << Tea1;
+			cout << "\n You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; // simple calculator
+			cin >> money;
+			cout << " Your change is " << money - choice << endl;
+			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			break;
+
+		case 2: cout << " ---Receipt---\n ";
+			cout << quantity << "" << Tea2;
+			cout << "\n You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; // simple calculator
+			cin >> money;
+			cout << " Your change is " << money - choice << endl;
+			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			break;
+
+		case 3: cout << " ---Receipt---\n ";
+			cout << quantity << "" << Tea3;
+			cout << "\n You owe us \n " << choice << "dhs" << ", And we only accept cash here. please do input your cash "; // simple calculator 
+			cin >> money;
+			cout << " Your change is " << money - choice << endl;
+			cout << "\nThank you for choosing \n \n --- Shaii's Hot & Cold Beverage ---\n ";
+			break;
+		}
+	}
+	
+}
